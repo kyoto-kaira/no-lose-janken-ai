@@ -1,0 +1,11 @@
+{"time":"2024-09-25T00:55:34.4120725+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-25T00:55:34.4120725+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240925_005534-n75el4ch\\logs\\debug-core.log"}
+{"time":"2024-09-25T00:55:34.4217682+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-25T00:55:34.4217682+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240925_005534-n75el4ch\\logs\\debug-core.log"}
+{"time":"2024-09-25T00:55:34.4263688+09:00","level":"INFO","msg":"created new stream","id":"n75el4ch"}
+{"time":"2024-09-25T00:55:34.4263688+09:00","level":"INFO","msg":"stream: started","id":"n75el4ch"}
+{"time":"2024-09-25T00:55:34.4263688+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"n75el4ch"}}
+{"time":"2024-09-25T00:55:34.4263688+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"n75el4ch"}}
+{"time":"2024-09-25T00:55:34.4263688+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"n75el4ch"}}
+{"time":"2024-09-25T00:55:34.72999+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-25T00:55:34.7366864+09:00","level":"INFO","msg":"Starting system monitor"}

@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "c:\Python\NF_2024\quick_draw\transformer_train.py", line 57, in <module>
+    pred_gen, pred_stop = model(X, src_mask)  # 推論（forward）
+                          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python\NF_2024\quick_draw\models\transformer.py", line 106, in forward
+    src = self.transformer_decoder(src, src_mask)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\transformer.py", line 369, in forward
+    output = mod(output, memory, tgt_mask=tgt_mask,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: TransformerEncoderLayer.forward() got an unexpected keyword argument 'tgt_mask'

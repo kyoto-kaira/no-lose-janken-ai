@@ -1,0 +1,11 @@
+{"time":"2024-09-24T09:37:40.4359418+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-24T09:37:40.4359418+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240924_093740-y4dwpa2d\\logs\\debug-core.log"}
+{"time":"2024-09-24T09:37:40.4420326+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-24T09:37:40.4420326+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240924_093740-y4dwpa2d\\logs\\debug-core.log"}
+{"time":"2024-09-24T09:37:40.447118+09:00","level":"INFO","msg":"created new stream","id":"y4dwpa2d"}
+{"time":"2024-09-24T09:37:40.447118+09:00","level":"INFO","msg":"stream: started","id":"y4dwpa2d"}
+{"time":"2024-09-24T09:37:40.447118+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"y4dwpa2d"}}
+{"time":"2024-09-24T09:37:40.447118+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"y4dwpa2d"}}
+{"time":"2024-09-24T09:37:40.447118+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"y4dwpa2d"}}
+{"time":"2024-09-24T09:37:40.7644497+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-24T09:37:40.7668084+09:00","level":"INFO","msg":"Starting system monitor"}

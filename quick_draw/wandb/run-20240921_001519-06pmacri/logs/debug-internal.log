@@ -1,0 +1,11 @@
+{"time":"2024-09-21T00:15:19.1790813+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-21T00:15:19.1790813+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240921_001519-06pmacri\\logs\\debug-core.log"}
+{"time":"2024-09-21T00:15:19.1817472+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-21T00:15:19.1817472+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240921_001519-06pmacri\\logs\\debug-core.log"}
+{"time":"2024-09-21T00:15:19.1858272+09:00","level":"INFO","msg":"created new stream","id":"06pmacri"}
+{"time":"2024-09-21T00:15:19.1858272+09:00","level":"INFO","msg":"stream: started","id":"06pmacri"}
+{"time":"2024-09-21T00:15:19.1858272+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"06pmacri"}}
+{"time":"2024-09-21T00:15:19.1858272+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"06pmacri"}}
+{"time":"2024-09-21T00:15:19.1858272+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"06pmacri"}}
+{"time":"2024-09-21T00:15:19.6779186+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-21T00:15:19.6799527+09:00","level":"INFO","msg":"Starting system monitor"}

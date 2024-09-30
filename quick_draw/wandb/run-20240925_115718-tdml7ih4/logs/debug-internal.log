@@ -1,0 +1,11 @@
+{"time":"2024-09-25T11:57:18.5472741+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-25T11:57:18.5473946+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240925_115718-tdml7ih4\\logs\\debug-core.log"}
+{"time":"2024-09-25T11:57:18.5502926+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-25T11:57:18.5502926+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240925_115718-tdml7ih4\\logs\\debug-core.log"}
+{"time":"2024-09-25T11:57:18.5551102+09:00","level":"INFO","msg":"created new stream","id":"tdml7ih4"}
+{"time":"2024-09-25T11:57:18.5556165+09:00","level":"INFO","msg":"stream: started","id":"tdml7ih4"}
+{"time":"2024-09-25T11:57:18.5556165+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"tdml7ih4"}}
+{"time":"2024-09-25T11:57:18.5556165+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"tdml7ih4"}}
+{"time":"2024-09-25T11:57:18.5556165+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"tdml7ih4"}}
+{"time":"2024-09-25T11:57:18.9052191+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-25T11:57:18.9073123+09:00","level":"INFO","msg":"Starting system monitor"}

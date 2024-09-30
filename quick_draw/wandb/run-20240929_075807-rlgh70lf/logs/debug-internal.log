@@ -1,0 +1,11 @@
+{"time":"2024-09-29T07:58:07.3456414+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-29T07:58:07.3456414+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240929_075807-rlgh70lf\\logs\\debug-core.log"}
+{"time":"2024-09-29T07:58:07.3482772+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-29T07:58:07.3482772+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240929_075807-rlgh70lf\\logs\\debug-core.log"}
+{"time":"2024-09-29T07:58:07.353109+09:00","level":"INFO","msg":"created new stream","id":"rlgh70lf"}
+{"time":"2024-09-29T07:58:07.353109+09:00","level":"INFO","msg":"stream: started","id":"rlgh70lf"}
+{"time":"2024-09-29T07:58:07.353109+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"rlgh70lf"}}
+{"time":"2024-09-29T07:58:07.353109+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"rlgh70lf"}}
+{"time":"2024-09-29T07:58:07.353109+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"rlgh70lf"}}
+{"time":"2024-09-29T07:58:07.6431995+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-29T07:58:07.644732+09:00","level":"INFO","msg":"Starting system monitor"}

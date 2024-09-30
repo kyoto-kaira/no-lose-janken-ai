@@ -1,0 +1,21 @@
+{"time":"2024-09-21T16:03:00.3684561+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-21T16:03:00.3684561+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240921_160300-31jr1vgo\\logs\\debug-core.log"}
+{"time":"2024-09-21T16:03:00.3721277+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-21T16:03:00.3721277+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240921_160300-31jr1vgo\\logs\\debug-core.log"}
+{"time":"2024-09-21T16:03:00.3761838+09:00","level":"INFO","msg":"created new stream","id":"31jr1vgo"}
+{"time":"2024-09-21T16:03:00.3761838+09:00","level":"INFO","msg":"stream: started","id":"31jr1vgo"}
+{"time":"2024-09-21T16:03:00.3761838+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"31jr1vgo"}}
+{"time":"2024-09-21T16:03:00.3761838+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"31jr1vgo"}}
+{"time":"2024-09-21T16:03:00.3761838+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"31jr1vgo"}}
+{"time":"2024-09-21T16:03:00.6784103+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-21T16:03:03.9397874+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-21T16:51:58.3541932+09:00","level":"INFO","msg":"stream: closing","id":"31jr1vgo"}
+{"time":"2024-09-21T16:51:58.3541932+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-09-21T16:51:58.3541932+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-09-21T16:51:58.5629072+09:00","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-09-21T16:51:58.5629072+09:00","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-09-21T16:51:58.5629072+09:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-09-21T16:51:59.5104509+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"31jr1vgo"}}
+{"time":"2024-09-21T16:51:59.5104509+09:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"31jr1vgo"}}
+{"time":"2024-09-21T16:51:59.5104509+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"31jr1vgo"}}
+{"time":"2024-09-21T16:51:59.5110474+09:00","level":"INFO","msg":"stream: closed","id":"31jr1vgo"}

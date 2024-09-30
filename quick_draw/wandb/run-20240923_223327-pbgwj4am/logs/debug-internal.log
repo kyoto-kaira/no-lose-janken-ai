@@ -1,0 +1,11 @@
+{"time":"2024-09-23T22:33:27.5618304+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-23T22:33:27.5618304+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240923_223327-pbgwj4am\\logs\\debug-core.log"}
+{"time":"2024-09-23T22:33:27.564881+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-23T22:33:27.564881+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240923_223327-pbgwj4am\\logs\\debug-core.log"}
+{"time":"2024-09-23T22:33:27.5699555+09:00","level":"INFO","msg":"created new stream","id":"pbgwj4am"}
+{"time":"2024-09-23T22:33:27.5699555+09:00","level":"INFO","msg":"stream: started","id":"pbgwj4am"}
+{"time":"2024-09-23T22:33:27.5699555+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"pbgwj4am"}}
+{"time":"2024-09-23T22:33:27.5699555+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"pbgwj4am"}}
+{"time":"2024-09-23T22:33:27.5699555+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"pbgwj4am"}}
+{"time":"2024-09-23T22:33:27.9371781+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-23T22:33:27.9392874+09:00","level":"INFO","msg":"Starting system monitor"}

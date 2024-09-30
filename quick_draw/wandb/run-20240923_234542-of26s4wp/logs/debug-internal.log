@@ -1,0 +1,11 @@
+{"time":"2024-09-23T23:45:42.8094248+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-23T23:45:42.8094248+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240923_234542-of26s4wp\\logs\\debug-core.log"}
+{"time":"2024-09-23T23:45:42.8508658+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-23T23:45:42.8508658+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240923_234542-of26s4wp\\logs\\debug-core.log"}
+{"time":"2024-09-23T23:45:42.8550291+09:00","level":"INFO","msg":"created new stream","id":"of26s4wp"}
+{"time":"2024-09-23T23:45:42.8829278+09:00","level":"INFO","msg":"stream: started","id":"of26s4wp"}
+{"time":"2024-09-23T23:45:42.8829278+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"of26s4wp"}}
+{"time":"2024-09-23T23:45:42.8829278+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"of26s4wp"}}
+{"time":"2024-09-23T23:45:42.8829278+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"of26s4wp"}}
+{"time":"2024-09-23T23:45:43.235396+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-23T23:45:43.2769381+09:00","level":"INFO","msg":"Starting system monitor"}

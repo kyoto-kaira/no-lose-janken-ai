@@ -1,0 +1,11 @@
+{"time":"2024-09-24T23:33:48.6071174+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-24T23:33:48.6071174+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240924_233348-clzoc9hy\\logs\\debug-core.log"}
+{"time":"2024-09-24T23:33:48.6102512+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-24T23:33:48.6102512+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240924_233348-clzoc9hy\\logs\\debug-core.log"}
+{"time":"2024-09-24T23:33:48.6143126+09:00","level":"INFO","msg":"created new stream","id":"clzoc9hy"}
+{"time":"2024-09-24T23:33:48.6143126+09:00","level":"INFO","msg":"stream: started","id":"clzoc9hy"}
+{"time":"2024-09-24T23:33:48.6143126+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"clzoc9hy"}}
+{"time":"2024-09-24T23:33:48.6143126+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"clzoc9hy"}}
+{"time":"2024-09-24T23:33:48.6143126+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"clzoc9hy"}}
+{"time":"2024-09-24T23:33:48.9560653+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-24T23:33:48.9575833+09:00","level":"INFO","msg":"Starting system monitor"}

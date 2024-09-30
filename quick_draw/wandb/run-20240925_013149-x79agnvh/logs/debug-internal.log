@@ -1,0 +1,21 @@
+{"time":"2024-09-25T01:31:49.6942194+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-25T01:31:49.6942194+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240925_013149-x79agnvh\\logs\\debug-core.log"}
+{"time":"2024-09-25T01:31:49.6982748+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-25T01:31:49.6982748+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240925_013149-x79agnvh\\logs\\debug-core.log"}
+{"time":"2024-09-25T01:31:49.7023218+09:00","level":"INFO","msg":"created new stream","id":"x79agnvh"}
+{"time":"2024-09-25T01:31:49.7023218+09:00","level":"INFO","msg":"stream: started","id":"x79agnvh"}
+{"time":"2024-09-25T01:31:49.7023218+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"x79agnvh"}}
+{"time":"2024-09-25T01:31:49.7023218+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"x79agnvh"}}
+{"time":"2024-09-25T01:31:49.7023218+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"x79agnvh"}}
+{"time":"2024-09-25T01:31:50.0027971+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-25T01:31:50.011884+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-25T01:31:50.8946769+09:00","level":"INFO","msg":"stream: closing","id":"x79agnvh"}
+{"time":"2024-09-25T01:31:50.8946769+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-09-25T01:31:50.8946769+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-09-25T01:31:51.3569155+09:00","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-09-25T01:31:51.3569155+09:00","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-09-25T01:31:51.3569155+09:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-09-25T01:31:52.0770119+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"x79agnvh"}}
+{"time":"2024-09-25T01:31:52.0770119+09:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"x79agnvh"}}
+{"time":"2024-09-25T01:31:52.0770119+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"x79agnvh"}}
+{"time":"2024-09-25T01:31:52.0775144+09:00","level":"INFO","msg":"stream: closed","id":"x79agnvh"}

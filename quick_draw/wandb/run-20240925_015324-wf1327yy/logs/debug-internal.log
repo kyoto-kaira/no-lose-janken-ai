@@ -1,0 +1,21 @@
+{"time":"2024-09-25T01:53:24.8075195+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-25T01:53:24.8075195+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240925_015324-wf1327yy\\logs\\debug-core.log"}
+{"time":"2024-09-25T01:53:24.8120978+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-25T01:53:24.812604+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240925_015324-wf1327yy\\logs\\debug-core.log"}
+{"time":"2024-09-25T01:53:24.8176764+09:00","level":"INFO","msg":"created new stream","id":"wf1327yy"}
+{"time":"2024-09-25T01:53:24.8176764+09:00","level":"INFO","msg":"stream: started","id":"wf1327yy"}
+{"time":"2024-09-25T01:53:24.8176764+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"wf1327yy"}}
+{"time":"2024-09-25T01:53:24.8176764+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wf1327yy"}}
+{"time":"2024-09-25T01:53:24.8176764+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"wf1327yy"}}
+{"time":"2024-09-25T01:53:25.1759617+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-25T01:53:25.1781342+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-25T01:53:26.2464771+09:00","level":"INFO","msg":"stream: closing","id":"wf1327yy"}
+{"time":"2024-09-25T01:53:26.2469845+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-09-25T01:53:26.2469845+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-09-25T01:53:26.4265155+09:00","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-09-25T01:53:26.4265155+09:00","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-09-25T01:53:26.4265155+09:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-09-25T01:53:27.268895+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"wf1327yy"}}
+{"time":"2024-09-25T01:53:27.268895+09:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"wf1327yy"}}
+{"time":"2024-09-25T01:53:27.268895+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"wf1327yy"}}
+{"time":"2024-09-25T01:53:27.2693961+09:00","level":"INFO","msg":"stream: closed","id":"wf1327yy"}

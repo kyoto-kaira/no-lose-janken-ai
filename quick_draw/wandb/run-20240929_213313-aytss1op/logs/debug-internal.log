@@ -1,0 +1,12 @@
+{"time":"2024-09-29T21:33:13.3076497+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-29T21:33:13.3076497+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240929_213313-aytss1op\\logs\\debug-core.log"}
+{"time":"2024-09-29T21:33:13.3112941+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-29T21:33:13.3112941+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240929_213313-aytss1op\\logs\\debug-core.log"}
+{"time":"2024-09-29T21:33:13.3158826+09:00","level":"INFO","msg":"created new stream","id":"aytss1op"}
+{"time":"2024-09-29T21:33:13.3158826+09:00","level":"INFO","msg":"stream: started","id":"aytss1op"}
+{"time":"2024-09-29T21:33:13.3158826+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"aytss1op"}}
+{"time":"2024-09-29T21:33:13.3158826+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"aytss1op"}}
+{"time":"2024-09-29T21:33:13.3158826+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"aytss1op"}}
+{"time":"2024-09-29T21:33:13.7201694+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-29T21:33:13.7262373+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-29T21:43:29.5771485+09:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/chiba0717-kyoto-university/QD_pointgan_G_pre/aytss1op/file_stream"}

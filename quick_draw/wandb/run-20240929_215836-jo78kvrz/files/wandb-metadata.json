@@ -1,0 +1,28 @@
+{
+  "os": "Windows-10-10.0.22631-SP0",
+  "python": "3.11.5",
+  "startedAt": "2024-09-29T12:58:37.005147Z",
+  "program": "c:\\Python\\NF_2024\\quick_draw\\pointgan_train.py",
+  "codePath": "pointgan_train.py",
+  "email": "chibaissei0717@gmail.com",
+  "root": "C:\\Python\\NF_2024\\quick_draw",
+  "host": "chiba-pc",
+  "username": "chiba",
+  "executable": "C:\\Users\\chiba\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "codePathLocal": "pointgan_train.py",
+  "cpu_count": 16,
+  "cpu_count_logical": 24,
+  "disk": {
+    "/": {
+      "total": "498947059712",
+      "used": "303751606272"
+    }
+  },
+  "memory": {
+    "total": "68523712512"
+  },
+  "cpu": {
+    "count": 16,
+    "countLogical": 24
+  }
+}

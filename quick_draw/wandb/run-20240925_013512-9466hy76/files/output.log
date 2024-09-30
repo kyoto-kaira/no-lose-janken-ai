@@ -1,0 +1,51 @@
+torch.Size([262144, 2])
+Traceback (most recent call last):
+  File "c:\Python\NF_2024\quick_draw\point_train.py", line 53, in <module>
+    pred = model(X)  # 推論（forward）
+           ^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python\NF_2024\quick_draw\models\pointnet_ex.py", line 136, in forward
+    input_data = self.main(input_data.reshape(-1,2))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python\NF_2024\quick_draw\models\pointnet_ex.py", line 114, in forward
+    return self.main(input_data)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\container.py", line 217, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python\NF_2024\quick_draw\models\pointnet_ex.py", line 64, in forward
+    matrix = self.main(input_data).view(-1, 2, 2)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\container.py", line 217, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python\NF_2024\quick_draw\models\pointnet_ex.py", line 32, in forward
+    return self.BatchNorm(input_data).reshape(-1, self.output_channels)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\batchnorm.py", line 171, in forward
+    return F.batch_norm(
+           ^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\functional.py", line 2450, in batch_norm
+    return torch.batch_norm(
+           ^^^^^^^^^^^^^^^^^
+RuntimeError: running_mean should contain 32768 elements not 64

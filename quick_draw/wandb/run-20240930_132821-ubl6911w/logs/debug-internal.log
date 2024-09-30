@@ -1,0 +1,11 @@
+{"time":"2024-09-30T13:28:21.2829188+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-30T13:28:21.2829188+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240930_132821-ubl6911w\\logs\\debug-core.log"}
+{"time":"2024-09-30T13:28:21.2859768+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-30T13:28:21.2859768+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240930_132821-ubl6911w\\logs\\debug-core.log"}
+{"time":"2024-09-30T13:28:21.2900904+09:00","level":"INFO","msg":"created new stream","id":"ubl6911w"}
+{"time":"2024-09-30T13:28:21.2905963+09:00","level":"INFO","msg":"stream: started","id":"ubl6911w"}
+{"time":"2024-09-30T13:28:21.2905963+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ubl6911w"}}
+{"time":"2024-09-30T13:28:21.2905963+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"ubl6911w"}}
+{"time":"2024-09-30T13:28:21.2905963+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"ubl6911w"}}
+{"time":"2024-09-30T13:28:21.7057425+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-30T13:28:21.7072646+09:00","level":"INFO","msg":"Starting system monitor"}

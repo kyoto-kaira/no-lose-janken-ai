@@ -1,0 +1,11 @@
+{"time":"2024-09-21T14:28:03.9029859+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-21T14:28:03.9029859+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240921_142803-8huskfj8\\logs\\debug-core.log"}
+{"time":"2024-09-21T14:28:03.9066368+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-21T14:28:03.9066368+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240921_142803-8huskfj8\\logs\\debug-core.log"}
+{"time":"2024-09-21T14:28:03.9112184+09:00","level":"INFO","msg":"created new stream","id":"8huskfj8"}
+{"time":"2024-09-21T14:28:03.9112184+09:00","level":"INFO","msg":"stream: started","id":"8huskfj8"}
+{"time":"2024-09-21T14:28:03.9112184+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"8huskfj8"}}
+{"time":"2024-09-21T14:28:03.9112184+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"8huskfj8"}}
+{"time":"2024-09-21T14:28:03.9112184+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"8huskfj8"}}
+{"time":"2024-09-21T14:28:04.2752435+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-21T14:28:04.2822409+09:00","level":"INFO","msg":"Starting system monitor"}

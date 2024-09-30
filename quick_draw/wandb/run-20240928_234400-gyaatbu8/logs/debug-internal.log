@@ -1,0 +1,11 @@
+{"time":"2024-09-28T23:44:00.2984293+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-28T23:44:00.2984293+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240928_234400-gyaatbu8\\logs\\debug-core.log"}
+{"time":"2024-09-28T23:44:00.3031079+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-28T23:44:00.3031079+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240928_234400-gyaatbu8\\logs\\debug-core.log"}
+{"time":"2024-09-28T23:44:00.3076947+09:00","level":"INFO","msg":"created new stream","id":"gyaatbu8"}
+{"time":"2024-09-28T23:44:00.3076947+09:00","level":"INFO","msg":"stream: started","id":"gyaatbu8"}
+{"time":"2024-09-28T23:44:00.3076947+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"gyaatbu8"}}
+{"time":"2024-09-28T23:44:00.3076947+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"gyaatbu8"}}
+{"time":"2024-09-28T23:44:00.3076947+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"gyaatbu8"}}
+{"time":"2024-09-28T23:44:01.4513967+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-28T23:44:01.4539687+09:00","level":"INFO","msg":"Starting system monitor"}

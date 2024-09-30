@@ -1,0 +1,11 @@
+{"time":"2024-09-28T22:20:29.4677984+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-28T22:20:29.4677984+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240928_222029-obncruev\\logs\\debug-core.log"}
+{"time":"2024-09-28T22:20:29.4732089+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-28T22:20:29.4732089+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240928_222029-obncruev\\logs\\debug-core.log"}
+{"time":"2024-09-28T22:20:29.477825+09:00","level":"INFO","msg":"created new stream","id":"obncruev"}
+{"time":"2024-09-28T22:20:29.477825+09:00","level":"INFO","msg":"stream: started","id":"obncruev"}
+{"time":"2024-09-28T22:20:29.477825+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"obncruev"}}
+{"time":"2024-09-28T22:20:29.477825+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"obncruev"}}
+{"time":"2024-09-28T22:20:29.477825+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"obncruev"}}
+{"time":"2024-09-28T22:20:29.8099635+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-28T22:20:30.0628674+09:00","level":"INFO","msg":"Starting system monitor"}

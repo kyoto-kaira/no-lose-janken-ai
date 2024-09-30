@@ -1,0 +1,11 @@
+{"time":"2024-09-25T11:37:04.1262632+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-25T11:37:04.1262632+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240925_113704-ytg21e86\\logs\\debug-core.log"}
+{"time":"2024-09-25T11:37:04.1293459+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-25T11:37:04.1293459+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240925_113704-ytg21e86\\logs\\debug-core.log"}
+{"time":"2024-09-25T11:37:04.1334607+09:00","level":"INFO","msg":"created new stream","id":"ytg21e86"}
+{"time":"2024-09-25T11:37:04.1334607+09:00","level":"INFO","msg":"stream: started","id":"ytg21e86"}
+{"time":"2024-09-25T11:37:04.1334607+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ytg21e86"}}
+{"time":"2024-09-25T11:37:04.1334607+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"ytg21e86"}}
+{"time":"2024-09-25T11:37:04.1334607+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"ytg21e86"}}
+{"time":"2024-09-25T11:37:04.8340344+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-25T11:37:04.8360599+09:00","level":"INFO","msg":"Starting system monitor"}

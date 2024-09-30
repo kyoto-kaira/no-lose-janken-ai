@@ -1,0 +1,21 @@
+{"time":"2024-09-24T23:23:42.4651232+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-24T23:23:42.4651232+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240924_232342-amzjmgln\\logs\\debug-core.log"}
+{"time":"2024-09-24T23:23:42.4682157+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-24T23:23:42.4682157+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240924_232342-amzjmgln\\logs\\debug-core.log"}
+{"time":"2024-09-24T23:23:42.4728271+09:00","level":"INFO","msg":"created new stream","id":"amzjmgln"}
+{"time":"2024-09-24T23:23:42.4728271+09:00","level":"INFO","msg":"stream: started","id":"amzjmgln"}
+{"time":"2024-09-24T23:23:42.4728271+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"amzjmgln"}}
+{"time":"2024-09-24T23:23:42.4728271+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"amzjmgln"}}
+{"time":"2024-09-24T23:23:42.4728271+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"amzjmgln"}}
+{"time":"2024-09-24T23:23:42.8491708+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-24T23:23:42.8508512+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-24T23:23:43.1858117+09:00","level":"INFO","msg":"stream: closing","id":"amzjmgln"}
+{"time":"2024-09-24T23:23:43.1858117+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-09-24T23:23:43.1858117+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-09-24T23:23:43.5641839+09:00","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-09-24T23:23:43.5641839+09:00","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-09-24T23:23:43.5641839+09:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-09-24T23:23:44.4668819+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"amzjmgln"}}
+{"time":"2024-09-24T23:23:44.4668819+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"amzjmgln"}}
+{"time":"2024-09-24T23:23:44.4668819+09:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"amzjmgln"}}
+{"time":"2024-09-24T23:23:44.4673836+09:00","level":"INFO","msg":"stream: closed","id":"amzjmgln"}

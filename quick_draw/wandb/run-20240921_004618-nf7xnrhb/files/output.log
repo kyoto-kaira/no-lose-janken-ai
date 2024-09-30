@@ -1,0 +1,10 @@
+Epoch: 0, Train Loss: 0.03828524981759891
+Evaluation Loss: 25091862153.08355
+Epoch: 1, Train Loss: 0.005757054145003299
+Evaluation Loss: 24773464132349.71
+Epoch: 2, Train Loss: 0.07076285227367196
+Evaluation Loss: nan
+Epoch: 3, Train Loss: 0.012872862140006307
+Evaluation Loss: nan
+Epoch: 4, Train Loss: 0.06439988463018356
+Evaluation Loss: nan

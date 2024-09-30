@@ -1,0 +1,15 @@
+{"time":"2024-09-23T23:53:21.2142323+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-23T23:53:21.2142323+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240923_235321-os5sh4q8\\logs\\debug-core.log"}
+{"time":"2024-09-23T23:53:21.221952+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-23T23:53:21.221952+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240923_235321-os5sh4q8\\logs\\debug-core.log"}
+{"time":"2024-09-23T23:53:21.2270567+09:00","level":"INFO","msg":"created new stream","id":"os5sh4q8"}
+{"time":"2024-09-23T23:53:21.2270567+09:00","level":"INFO","msg":"stream: started","id":"os5sh4q8"}
+{"time":"2024-09-23T23:53:21.2270567+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"os5sh4q8"}}
+{"time":"2024-09-23T23:53:21.2270567+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"os5sh4q8"}}
+{"time":"2024-09-23T23:53:21.2270567+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"os5sh4q8"}}
+{"time":"2024-09-23T23:53:21.5896444+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-23T23:53:21.5932858+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-24T02:00:40.3119207+09:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/chiba0717-kyoto-university/QD_pointgen1_512_PointNorm/os5sh4q8/file_stream"}
+{"time":"2024-09-24T02:00:46.7549256+09:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2024-09-24T03:08:32.6138676+09:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/chiba0717-kyoto-university/QD_pointgen1_512_PointNorm/os5sh4q8/file_stream"}
+{"time":"2024-09-24T04:29:22.6146099+09:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/chiba0717-kyoto-university/QD_pointgen1_512_PointNorm/os5sh4q8/file_stream"}

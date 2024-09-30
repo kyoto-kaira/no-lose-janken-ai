@@ -1,0 +1,28 @@
+{"time":"2024-09-21T00:46:18.2845715+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-21T00:46:18.285073+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240921_004618-nf7xnrhb\\logs\\debug-core.log"}
+{"time":"2024-09-21T00:46:18.2887842+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-21T00:46:18.2887842+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240921_004618-nf7xnrhb\\logs\\debug-core.log"}
+{"time":"2024-09-21T00:46:18.2929759+09:00","level":"INFO","msg":"created new stream","id":"nf7xnrhb"}
+{"time":"2024-09-21T00:46:18.2929759+09:00","level":"INFO","msg":"stream: started","id":"nf7xnrhb"}
+{"time":"2024-09-21T00:46:18.2929759+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"nf7xnrhb"}}
+{"time":"2024-09-21T00:46:18.2929759+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"nf7xnrhb"}}
+{"time":"2024-09-21T00:46:18.2929759+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"nf7xnrhb"}}
+{"time":"2024-09-21T00:46:18.6488044+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-21T00:46:18.6560024+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-21T04:33:49.9267598+09:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2024-09-21T04:37:28.1678955+09:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2024-09-21T05:19:17.8808261+09:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2024-09-21T05:20:00.8600987+09:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/chiba0717-kyoto-university/QD_pointgen512_normed/nf7xnrhb/file_stream"}
+{"time":"2024-09-21T05:46:04.2436412+09:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/chiba0717-kyoto-university/QD_pointgen512_normed/nf7xnrhb/file_stream"}
+{"time":"2024-09-21T05:46:26.3577412+09:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2024-09-21T05:51:29.2783652+09:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/chiba0717-kyoto-university/QD_pointgen512_normed/nf7xnrhb/file_stream"}
+{"time":"2024-09-21T06:46:19.23584+09:00","level":"INFO","msg":"stream: closing","id":"nf7xnrhb"}
+{"time":"2024-09-21T06:46:19.23584+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-09-21T06:46:19.23584+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-09-21T06:46:19.4832091+09:00","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-09-21T06:46:19.4837154+09:00","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-09-21T06:46:19.4837154+09:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-09-21T06:46:20.3183587+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"nf7xnrhb"}}
+{"time":"2024-09-21T06:46:20.3183587+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"nf7xnrhb"}}
+{"time":"2024-09-21T06:46:20.3183587+09:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"nf7xnrhb"}}
+{"time":"2024-09-21T06:46:20.3188608+09:00","level":"INFO","msg":"stream: closed","id":"nf7xnrhb"}

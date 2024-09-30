@@ -1,0 +1,11 @@
+{"time":"2024-09-23T23:32:12.5834293+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-23T23:32:12.5834293+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240923_233212-zcpah7pu\\logs\\debug-core.log"}
+{"time":"2024-09-23T23:32:12.5912442+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-23T23:32:12.5917488+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240923_233212-zcpah7pu\\logs\\debug-core.log"}
+{"time":"2024-09-23T23:32:12.5959003+09:00","level":"INFO","msg":"created new stream","id":"zcpah7pu"}
+{"time":"2024-09-23T23:32:12.596408+09:00","level":"INFO","msg":"stream: started","id":"zcpah7pu"}
+{"time":"2024-09-23T23:32:12.596408+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"zcpah7pu"}}
+{"time":"2024-09-23T23:32:12.596408+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"zcpah7pu"}}
+{"time":"2024-09-23T23:32:12.596408+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"zcpah7pu"}}
+{"time":"2024-09-23T23:32:12.9571828+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-23T23:32:12.9637596+09:00","level":"INFO","msg":"Starting system monitor"}

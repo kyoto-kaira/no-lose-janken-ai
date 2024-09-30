@@ -1,0 +1,51 @@
+Traceback (most recent call last):
+  File "c:\Python\NF_2024\quick_draw\point_train.py", line 53, in <module>
+    pred = model(X)  # 推論（forward）
+           ^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python\NF_2024\quick_draw\models\pointnet_ex.py", line 135, in forward
+    input_data = self.main(input_data.reshape(-1,2))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python\NF_2024\quick_draw\models\pointnet_ex.py", line 113, in forward
+    return self.main(input_data)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\container.py", line 217, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python\NF_2024\quick_draw\models\pointnet_ex.py", line 63, in forward
+    matrix = self.main(input_data).view(-1, 2, 2)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\container.py", line 217, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python\NF_2024\quick_draw\models\pointnet_ex.py", line 31, in forward
+    return self.BatchNorm(input_data).reshape(-1, self.output_channels)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\batchnorm.py", line 171, in forward
+    return F.batch_norm(
+           ^^^^^^^^^^^^^
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\functional.py", line 2448, in batch_norm
+    _verify_batch_size(input.size())
+  File "C:\Users\chiba\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\functional.py", line 2416, in _verify_batch_size
+    raise ValueError("Expected more than 1 value per channel when training, got input size {}".format(size))
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 262144])

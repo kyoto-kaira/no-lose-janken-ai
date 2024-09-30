@@ -1,0 +1,21 @@
+{"time":"2024-09-21T23:07:58.2728214+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-21T23:07:58.2728214+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240921_230758-kxvbz79a\\logs\\debug-core.log"}
+{"time":"2024-09-21T23:07:58.2764077+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-21T23:07:58.2769155+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240921_230758-kxvbz79a\\logs\\debug-core.log"}
+{"time":"2024-09-21T23:07:58.281487+09:00","level":"INFO","msg":"created new stream","id":"kxvbz79a"}
+{"time":"2024-09-21T23:07:58.281487+09:00","level":"INFO","msg":"stream: started","id":"kxvbz79a"}
+{"time":"2024-09-21T23:07:58.281487+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"kxvbz79a"}}
+{"time":"2024-09-21T23:07:58.281487+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"kxvbz79a"}}
+{"time":"2024-09-21T23:07:58.281487+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"kxvbz79a"}}
+{"time":"2024-09-21T23:07:58.6102986+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-21T23:07:58.6175975+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-22T07:43:21.641921+09:00","level":"INFO","msg":"stream: closing","id":"kxvbz79a"}
+{"time":"2024-09-22T07:43:21.641921+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-09-22T07:43:21.641921+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-09-22T07:43:21.8341879+09:00","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-09-22T07:43:21.8341879+09:00","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-09-22T07:43:21.8341879+09:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-09-22T07:43:23.8012071+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"kxvbz79a"}}
+{"time":"2024-09-22T07:43:23.8012071+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"kxvbz79a"}}
+{"time":"2024-09-22T07:43:23.8012071+09:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"kxvbz79a"}}
+{"time":"2024-09-22T07:43:23.8032335+09:00","level":"INFO","msg":"stream: closed","id":"kxvbz79a"}

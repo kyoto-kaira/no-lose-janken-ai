@@ -1,0 +1,21 @@
+{"time":"2024-09-25T01:50:15.4470954+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-25T01:50:15.4470954+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240925_015015-apien4js\\logs\\debug-core.log"}
+{"time":"2024-09-25T01:50:15.4538339+09:00","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-25T01:50:15.4538339+09:00","level":"INFO","msg":"created symlink","path":"C:\\Python\\NF_2024\\quick_draw\\wandb\\run-20240925_015015-apien4js\\logs\\debug-core.log"}
+{"time":"2024-09-25T01:50:15.457908+09:00","level":"INFO","msg":"created new stream","id":"apien4js"}
+{"time":"2024-09-25T01:50:15.457908+09:00","level":"INFO","msg":"stream: started","id":"apien4js"}
+{"time":"2024-09-25T01:50:15.457908+09:00","level":"INFO","msg":"sender: started","stream_id":{"value":"apien4js"}}
+{"time":"2024-09-25T01:50:15.457908+09:00","level":"INFO","msg":"handler: started","stream_id":{"value":"apien4js"}}
+{"time":"2024-09-25T01:50:15.457908+09:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"apien4js"}}
+{"time":"2024-09-25T01:50:15.7543928+09:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-25T01:50:15.7564149+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-25T01:50:16.7373894+09:00","level":"INFO","msg":"stream: closing","id":"apien4js"}
+{"time":"2024-09-25T01:50:16.7373894+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-09-25T01:50:16.7373894+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-09-25T01:50:16.9204062+09:00","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-09-25T01:50:16.9204062+09:00","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-09-25T01:50:16.9204062+09:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-09-25T01:50:18.4151605+09:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"apien4js"}}
+{"time":"2024-09-25T01:50:18.4151605+09:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"apien4js"}}
+{"time":"2024-09-25T01:50:18.4151605+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"apien4js"}}
+{"time":"2024-09-25T01:50:18.416731+09:00","level":"INFO","msg":"stream: closed","id":"apien4js"}
