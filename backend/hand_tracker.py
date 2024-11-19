@@ -44,7 +44,9 @@ class HandTracker:
             return results.multi_hand_landmarks
         return None
 
-    def draw_landmarks(self, image: np.ndarray, multi_hand_landmarks: Optional[mp.solutions.hands.HandLandmark|None]) -> None:
+    def draw_landmarks(
+        self, image: np.ndarray, multi_hand_landmarks: Optional[mp.solutions.hands.HandLandmark | None]
+    ) -> None:
         """
         入力画像に検出された手のランドマークを描画します。
 

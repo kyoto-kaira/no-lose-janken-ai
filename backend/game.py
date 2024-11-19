@@ -68,7 +68,7 @@ class JankenGame:
             multi_hand_landmarks = self.tracker.process_frame(frame)
             if event_start.is_set() and multi_hand_landmarks:  # ゲームが開始されており、ランドマークが検出された場合
                 for hand_landmarks in multi_hand_landmarks:
-                    landmarks=[]
+                    landmarks = []
                     for lm in hand_landmarks.landmark:
                         landmarks.append(lm.x)
                         landmarks.append(lm.y)
