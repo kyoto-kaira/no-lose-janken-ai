@@ -24,7 +24,7 @@ class HandTracker:
         self.mp_drawing = mp.solutions.drawing_utils
         self.hands = self.mp_hands.Hands(max_num_hands=1, min_detection_confidence=0.5, min_tracking_confidence=0.5)
 
-    def process_frame(self, image: np.ndarray) -> Optional[mp.solutions.hands.HandLandmark]:
+    def process_frame(self, image: np.ndarray) -> Optional[mp.solutions.hands.HandLandmark | None]:
         """
         入力画像から手のランドマークを検出します。
 
@@ -40,9 +40,11 @@ class HandTracker:
         image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         image_rgb.flags.writeable = False
         results = self.hands.process(image_rgb)
-        return results.multi_hand_landmarks
+        if results.multi_hand_landmarks:
+            return results.multi_hand_landmarks
+        return None
 
-    def draw_landmarks(self, image: np.ndarray, hand_landmarks: mp.solutions.hands.HandLandmark) -> None:
+    def draw_landmarks(self, image: np.ndarray, multi_hand_landmarks: Optional[mp.solutions.hands.HandLandmark|None]) -> None:
         """
         入力画像に検出された手のランドマークを描画します。
 
@@ -50,8 +52,8 @@ class HandTracker:
 
         Args:
             image (np.ndarray): 入力画像（BGR形式）
-            hand_landmarks (mp.solutions.hands.HandLandmark): 検出された手のランドマーク
+            multi_hand_landmarks (mp.solutions.hands.HandLandmark): 検出された手のランドマーク
         """
-        if hand_landmarks:
-            for landmarks in hand_landmarks:
+        if multi_hand_landmarks:
+            for landmarks in multi_hand_landmarks:
                 self.mp_drawing.draw_landmarks(image, landmarks, self.mp_hands.HAND_CONNECTIONS)

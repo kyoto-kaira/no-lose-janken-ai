@@ -58,24 +58,27 @@ class JankenGame:
         """
         cap = cv2.VideoCapture(0)  # カメラを起動
         while cap.isOpened():  # カメラが正常に動作している間ループ
+            cv2.waitKey(1)
             success, frame = cap.read()  # フレームをキャプチャ
             if not success:  # フレームが取得できない場合
                 print("カメラのフレームを取得できませんでした。")
                 break
 
             # 手のランドマークを検出
-            hand_landmarks = self.tracker.process_frame(frame)
-            if event_start.is_set() and hand_landmarks:  # ゲームが開始されており、ランドマークが検出された場合
-                for hand in hand_landmarks:  # 各手について予測
-                    landmarks = (
-                        [lm.x for lm in hand.landmark] + [lm.y for lm in hand.landmark] + [lm.z for lm in hand.landmark]
-                    )
-                    gesture = self.predict(landmarks)  # 手のランドマークからジャンケンを予測
-                    print(f"予測: {gesture}")  # 予測結果を表示
-
+            multi_hand_landmarks = self.tracker.process_frame(frame)
+            if event_start.is_set() and multi_hand_landmarks:  # ゲームが開始されており、ランドマークが検出された場合
+                for hand_landmarks in multi_hand_landmarks:
+                    landmarks=[]
+                    for lm in hand_landmarks.landmark:
+                        landmarks.append(lm.x)
+                        landmarks.append(lm.y)
+                        landmarks.append(lm.z)
+                gesture = self.predict(landmarks)  # 手のランドマークからジャンケンを予測
+                print(f"予測: {gesture}")  # 予測結果を表示
             # 手のランドマークをフレームに描画
-            self.tracker.draw_landmarks(frame, hand_landmarks)
-            cv2.imshow("Hand Tracking", frame)  # フレームを表示
+            if multi_hand_landmarks:
+                self.tracker.draw_landmarks(frame, multi_hand_landmarks)
+                cv2.imshow("Hand Tracking", frame)  # フレームを表示
 
             # 終了フラグまたは「q」キーが押された場合、ループを終了
             if event_end.is_set() or cv2.waitKey(1) & 0xFF == ord("q"):
