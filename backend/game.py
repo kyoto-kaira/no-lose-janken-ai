@@ -6,47 +6,80 @@ from torch import nn
 
 from .hand_tracker import HandTracker
 
+JANKEN_LABELS = {0: "グー", 1: "チョキ", 2: "パー"}
+
 
 class JankenGame:
     """
     ジャンケンゲームを管理するクラス
+
+    手のランドマークを検出し、モデルを用いてジャンケンの手（グー、チョキ、パー）を予測します。
     """
 
     def __init__(self, model: nn.Module, device: torch.device) -> None:
-        self.model = model
-        self.device = device
-        self.tracker = HandTracker()
-        self.janken_labels = {0: "グー", 1: "チョキ", 2: "パー"}
-        self.hc = None
+        """
+        JankenGameクラスの初期化メソッド
+
+        Args:
+            model (nn.Module): ジャンケンの予測に使用するPyTorchモデル
+            device (torch.device): モデルの実行デバイス（CPUまたはGPU）
+        """
+        self.model = model  # 予測モデル
+        self.device = device  # 実行デバイス
+        self.tracker = HandTracker()  # 手のランドマーク検出器
+        self.hc = None  # LSTMの隠れ状態を保持
 
     def predict(self, landmarks: list) -> str:
+        """
+        手のランドマーク情報からジャンケンの手を予測します。
+
+        Args:
+            landmarks (list): 検出された手のランドマーク情報（x, y, z座標）
+
+        Returns:
+            str: 予測されたジャンケンの手（"グー", "チョキ", "パー"）
+        """
+        # 入力データをテンソルに変換し、モデルで予測
         data = torch.tensor(landmarks, dtype=torch.float32).reshape(1, 1, 63).to(self.device)
-        with torch.no_grad():
-            y_pred, self.hc = self.model(data, self.hc)
-            return self.janken_labels[int(y_pred.argmax(2).item())]
+        with torch.no_grad():  # 勾配計算を無効化
+            y_pred, self.hc = self.model(data, self.hc)  # モデルによる予測とLSTMの隠れ状態の更新
+            return JANKEN_LABELS[int(y_pred.argmax(2).item())]  # 最大値のインデックスをラベルに変換
 
     def play(self, event_start: Event, event_end: Event) -> None:
-        cap = cv2.VideoCapture(0)
-        while cap.isOpened():
-            success, frame = cap.read()
-            if not success:
+        """
+        カメラを使用してジャンケンをリアルタイムでプレイします。
+
+        手のランドマークを検出し、モデルでジャンケンの手を予測します。
+        ゲームは、イベントフラグによって開始および終了が制御されます。
+
+        Args:
+            event_start (Event): ゲーム開始フラグ
+            event_end (Event): ゲーム終了フラグ
+        """
+        cap = cv2.VideoCapture(0)  # カメラを起動
+        while cap.isOpened():  # カメラが正常に動作している間ループ
+            success, frame = cap.read()  # フレームをキャプチャ
+            if not success:  # フレームが取得できない場合
                 print("カメラのフレームを取得できませんでした。")
                 break
 
+            # 手のランドマークを検出
             hand_landmarks = self.tracker.process_frame(frame)
-            if event_start.is_set() and hand_landmarks:
-                for hand in hand_landmarks:
+            if event_start.is_set() and hand_landmarks:  # ゲームが開始されており、ランドマークが検出された場合
+                for hand in hand_landmarks:  # 各手について予測
                     landmarks = (
                         [lm.x for lm in hand.landmark] + [lm.y for lm in hand.landmark] + [lm.z for lm in hand.landmark]
                     )
-                    gesture = self.predict(landmarks)
-                    print(f"予測: {gesture}")
+                    gesture = self.predict(landmarks)  # 手のランドマークからジャンケンを予測
+                    print(f"予測: {gesture}")  # 予測結果を表示
 
+            # 手のランドマークをフレームに描画
             self.tracker.draw_landmarks(frame, hand_landmarks)
-            cv2.imshow("Hand Tracking", frame)
+            cv2.imshow("Hand Tracking", frame)  # フレームを表示
 
+            # 終了フラグまたは「q」キーが押された場合、ループを終了
             if event_end.is_set() or cv2.waitKey(1) & 0xFF == ord("q"):
                 break
 
-        cap.release()
-        cv2.destroyAllWindows()
+        cap.release()  # カメラリソースを解放
+        cv2.destroyAllWindows()  # ウィンドウを閉じる
