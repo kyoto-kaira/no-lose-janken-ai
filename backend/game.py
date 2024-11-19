@@ -31,7 +31,6 @@ def janken_game(event_start: Event, event_end: Event, model: LSTMModel, device: 
         return
 
     cap = cv2.VideoCapture(camera_id)
-
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
@@ -50,6 +49,7 @@ def janken_game(event_start: Event, event_end: Event, model: LSTMModel, device: 
                 ]
                 gesture = predict_hand_gesture(landmarks, model, device, hc)
                 print(f"予測: {gesture}")
+                print(frame.flags.writeable)
 
         cv2.imshow("Hand Tracking", frame)
         if cv2.waitKey(1) & 0xFF == ord('q') or event_end.is_set():

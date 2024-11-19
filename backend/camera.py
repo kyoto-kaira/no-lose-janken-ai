@@ -8,7 +8,7 @@ def find_camera() -> Optional[int]:
     使用可能なカメラデバイスのIDを検索する。
     """
     for i in range(0, 20):
-        cap = cv2.VideoCapture(i, cv2.CAP_DSHOW)
+        cap = cv2.VideoCapture(i)
         if cap.isOpened():
             cap.release()
             return i
@@ -33,6 +33,7 @@ class HandTracker:
         フレームから手のランドマークを検出する。
         """
         image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        image_rgb.flags.writeable = False
         results = self.hands.process(image_rgb)
         if results.multi_hand_landmarks:
             return results.multi_hand_landmarks

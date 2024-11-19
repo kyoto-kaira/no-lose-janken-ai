@@ -15,7 +15,7 @@ def start_timer(event_start: threading.Event, event_end: threading.Event) -> Non
     event_start.set()
     time.sleep(1)
     print("じゃんけん")
-    time.sleep(1.5)
+    time.sleep(15)
     print("ポン")
     event_end.set()
 
