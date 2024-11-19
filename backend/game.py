@@ -68,20 +68,16 @@ class JankenGame:
             multi_hand_landmarks = self.tracker.process_frame(frame)
             if event_start.is_set() and multi_hand_landmarks:  # ゲームが開始されており、ランドマークが検出された場合
                 for hand_landmarks in multi_hand_landmarks:
-                    landmarks = []
-                    for lm in hand_landmarks.landmark:
-                        landmarks.append(lm.x)
-                        landmarks.append(lm.y)
-                        landmarks.append(lm.z)
-                gesture = self.predict(landmarks)  # 手のランドマークからジャンケンを予測
-                print(f"予測: {gesture}")  # 予測結果を表示
+                    landmarks = [coord for lm in hand_landmarks.landmark for coord in (lm.x, lm.y, lm.z)]
+                gesture = self.predict(landmarks)
+                print(f"予測: {gesture}")
             # 手のランドマークをフレームに描画
             if multi_hand_landmarks:
                 self.tracker.draw_landmarks(frame, multi_hand_landmarks)
                 cv2.imshow("Hand Tracking", frame)  # フレームを表示
 
             # 終了フラグまたは「q」キーが押された場合、ループを終了
-            if event_end.is_set() or cv2.waitKey(1) & 0xFF == ord("q"):
+            if event_end.is_set():
                 break
 
         cap.release()  # カメラリソースを解放

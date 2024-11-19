@@ -22,7 +22,7 @@ class GameTimer:
             event_end (threading.Event): ゲームの終了タイミングを通知するイベントフラグ
 
         Returns:
-            None: この関数は何も返しません
+            None
         """
         # ゲーム開始前の猶予時間
         time.sleep(5)

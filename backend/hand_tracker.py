@@ -34,7 +34,7 @@ class HandTracker:
             image (np.ndarray): 入力画像（BGR形式）
 
         Returns:
-            Optional[mp.solutions.hands.HandLandmark]: 検出された手のランドマーク。
+            Optional[mp.solutions.hands.HandLandmark | None]: 検出された手のランドマーク。
             検出できなかった場合はNoneを返します。
         """
         image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -54,7 +54,10 @@ class HandTracker:
 
         Args:
             image (np.ndarray): 入力画像（BGR形式）
-            multi_hand_landmarks (mp.solutions.hands.HandLandmark): 検出された手のランドマーク
+            multi_hand_landmarks (Optional[mp.solutions.hands.HandLandmark | None]): 検出された手のランドマーク
+        
+        Returns:
+            None
         """
         if multi_hand_landmarks:
             for landmarks in multi_hand_landmarks:
