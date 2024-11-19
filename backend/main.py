@@ -1,52 +1,33 @@
-import threading
-import time
-
 import torch
+import keyboard
+import threading
+from .model import LSTMNet
+from .game import JankenGame
+from .timer import GameTimer
 
-from .game import janken_game
-from .model import load_model
+# モデルとデバイスの初期化
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model = LSTMNet(63, 50, 100, 3).to(device)
+model.load_state_dict(torch.load("lstm3.pth", map_location=device))
+model.eval()
 
+# ジャンケンゲームの初期化
+game = JankenGame(model, device)
 
-def start_timer(event_start: threading.Event, event_end: threading.Event) -> None:
-    """
-    ジャンケンの合図を出すためのタイマー関数。
-    """
-    time.sleep(5)
-    print("最初はグー")
-    time.sleep(1)
-    event_start.set()
-    time.sleep(1)
-    print("じゃんけん")
-    time.sleep(1.5)
-    print("ポン")
-    event_end.set()
+# メインループ
+while True:
+    if keyboard.is_pressed("s"):
+        event_start = threading.Event()
+        event_end = threading.Event()
 
+        worker = threading.Thread(target=game.play, args=(event_start, event_end))
+        trigger = threading.Thread(target=GameTimer.start, args=(event_start, event_end))
 
-def main() -> None:
-    """
-    ゲームを始めるための関数
-    """
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = load_model(device)
-    while True:
-        user_input = input("Press 's' to start the game or 'q' to quit: ")
-        if user_input.lower() == "s":
-            event_start = threading.Event()
-            event_end = threading.Event()
+        worker.start()
+        trigger.start()
 
-            game_thread = threading.Thread(target=janken_game, args=(event_start, event_end, model, device))
-            timer_thread = threading.Thread(target=start_timer, args=(event_start, event_end))
+        worker.join()
+        trigger.join()
 
-            game_thread.start()
-            timer_thread.start()
-
-            game_thread.join()
-            timer_thread.join()
-
-        elif user_input.lower() == "q":
-            print("終了します。")
-            break
-
-
-if __name__ == "__main__":
-    main()
+    if keyboard.is_pressed("q"):
+        break

@@ -10,14 +10,14 @@
 ## 使用方法
 
 1. **仮想環境の作成**  
-   以下のコマンドで仮想環境を作成します。  
+   以下のコマンドで仮想環境を作成します。(順番は以下のコードの通りにしてください。)  
 
    ```bash
-   python -m venv venv
-   venv\Scripts\activate.bat
-   pip install -r requirements.txt
+   python -m venv venv  
+   venv\Scripts\activate.bat  
+   pip install -r requirements.txt  
+   pip install -r requirements_dev.txt  
    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
-   pip install -r requirements_dev.txt
    ```
 2. **アプリの起動**  
    以下のコマンドでアプリを実行します。

@@ -26,9 +26,7 @@ class HandTracker:
         self.hands = mp.solutions.hands.Hands(max_num_hands=1, min_detection_confidence=0.5, min_tracking_confidence=0.5)
         self.drawing_utils = mp.solutions.drawing_utils
 
-    def process_frame(
-        self, image: np.ndarray
-    ) -> Optional[List[mp.framework.formats.landmark_pb2.NormalizedLandmarkList]]:
+    def process_frame(self, image: np.ndarray) -> Optional[List | None]:
         """
         フレームから手のランドマークを検出する。
         """

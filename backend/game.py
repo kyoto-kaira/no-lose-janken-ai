@@ -1,64 +1,43 @@
-from threading import Event
-from typing import List, Optional, Tuple
-
-import cv2
 import torch
+import cv2
+from lstm_net import LSTMNet
+from hand_tracker import HandTracker
+from typing import Optional
 
-from .camera import HandTracker, find_camera
-from .model import LSTMModel
+class JankenGame:
+    def __init__(self, model: nn.Module, device: torch.device) -> None:
+        self.model = model
+        self.device = device
+        self.tracker = HandTracker()
+        self.janken_labels = {0: "グー", 1: "チョキ", 2: "パー"}
+        self.hc = None
 
-JANKEN_LABELS = {0: "グー", 1: "チョキ", 2: "パー"}
+    def predict(self, landmarks: list) -> str:
+        data = torch.tensor(landmarks, dtype=torch.float32).reshape(1, 1, 63).to(self.device)
+        with torch.no_grad():
+            y_pred, self.hc = self.model(data, self.hc)
+            return self.janken_labels[int(y_pred.argmax(2).item())]
 
+    def play(self, event_start, event_end) -> None:
+        cap = cv2.VideoCapture(0)
+        while cap.isOpened():
+            success, frame = cap.read()
+            if not success:
+                print("カメラのフレームを取得できませんでした。")
+                break
 
-def predict_hand_gesture(
-    landmarks: List[float],
-    model: LSTMModel,
-    device: torch.device,
-    hc: Optional[Tuple[torch.Tensor, torch.Tensor]] = None,
-) -> str:
-    """
-    手のランドマークを使用してジャンケンの手を予測する。
-    """
-    data = torch.tensor(landmarks, dtype=torch.float32).reshape(1, 1, 63).to(device)
-    with torch.no_grad():
-        y_pred, hc = model(data, hc)
-        gesture = JANKEN_LABELS[int(y_pred.argmax(2).item())]
-        return gesture
+            hand_landmarks = self.tracker.process_frame(frame)
+            if event_start.is_set() and hand_landmarks:
+                for hand in hand_landmarks:
+                    landmarks = [lm.x for lm in hand.landmark] + [lm.y for lm in hand.landmark] + [lm.z for lm in hand.landmark]
+                    gesture = self.predict(landmarks)
+                    print(f"予測: {gesture}")
 
+            self.tracker.draw_landmarks(frame, hand_landmarks)
+            cv2.imshow('Hand Tracking', frame)
 
-def janken_game(event_start: Event, event_end: Event, model: LSTMModel, device: torch.device) -> None:
-    """
-    カメラ上での手の動きからジャンケンの手を予測する関数
-    """
-    hc = None
-    tracker = HandTracker()
-    camera_id = find_camera()
+            if event_end.is_set() or cv2.waitKey(1) & 0xFF == ord('q'):
+                break
 
-    if camera_id is None:
-        print("カメラが見つかりませんでした。")
-        return
-
-    cap = cv2.VideoCapture(camera_id)
-    while cap.isOpened():
-        ret, frame = cap.read()
-        if not ret:
-            print("カメラのフレームを取得できませんでした。")
-            break
-
-        if event_start.is_set():
-            landmarks_list = tracker.process_frame(frame)
-            if landmarks_list:
-                landmarks = (
-                    [lm.x for lm in landmarks_list[0].landmark]
-                    + [lm.y for lm in landmarks_list[0].landmark]
-                    + [lm.z for lm in landmarks_list[0].landmark]
-                )
-                gesture = predict_hand_gesture(landmarks, model, device, hc)
-                print(f"予測: {gesture}")
-
-        cv2.imshow("Hand Tracking", frame)
-        if cv2.waitKey(1) & 0xFF == ord("q") or event_end.is_set():
-            break
-
-    cap.release()
-    cv2.destroyAllWindows()
+        cap.release()
+        cv2.destroyAllWindows()
