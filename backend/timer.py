@@ -1,7 +1,12 @@
-import time
 import threading
+import time
+
 
 class GameTimer:
+    """
+    ゲームのタイマーを管理するクラス
+    """
+
     @staticmethod
     def start(event_start: threading.Event, event_end: threading.Event) -> None:
         time.sleep(5)
