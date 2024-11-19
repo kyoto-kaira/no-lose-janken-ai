@@ -2,6 +2,7 @@ import cv2
 import mediapipe as mp
 from typing import Optional
 
+
 def find_camera() -> Optional[int]:
     """
     使用可能なカメラデバイスのIDを検索する。
@@ -13,10 +14,12 @@ def find_camera() -> Optional[int]:
             return i
     return None
 
+
 class HandTracker:
     """
     Mediapipe を使用した手の検出クラス。
     """
+
     def __init__(self) -> None:
         self.hands = mp.solutions.hands.Hands(
             max_num_hands=1,

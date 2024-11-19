@@ -1,19 +1,21 @@
 # ベースイメージ
-FROM ubuntu:22.04
-# タイムゾーン設定を非対話モードにするための環境変数を設定
-ENV DEBIAN_FRONTEND=noninteractive
-# パッケージの更新と必要なツールのインストール
+FROM python:3.10-slim
+
+# 必要なパッケージをインストール
 RUN apt-get update && apt-get install -y \
-    python3 \
-    python3-pip \
+    python3-opencv \
     libopencv-dev \
-    v4l-utils \
     ffmpeg \
-    x11-apps
-# タイムゾーンを設定
-RUN ln -fs /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
-    dpkg-reconfigure --frontend noninteractive tzdata
-# 必要なパッケージリストをコンテナ内にコピーしてインストール
+    v4l-utils \
+    gcc \
+    g++ \
+    make \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# 作業ディレクトリを設定
+WORKDIR /app
+
+# 必要なPythonライブラリをインストール
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 

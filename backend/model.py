@@ -1,13 +1,14 @@
 import torch
 import torch.nn as nn
 from torch import Tensor
-
 MODEL_PATH = "data/lstm3.pth"
+
 
 class LSTMModel(nn.Module):
     """
     ジャンケンの手を予測する LSTM モデル。
     """
+
     def __init__(self, input_dim: int, emb_dim: int, hidden_dim: int, output_dim: int) -> None:
         super().__init__()
         self.linear = nn.Linear(input_dim, emb_dim)
@@ -19,6 +20,7 @@ class LSTMModel(nn.Module):
         x, hc = self.lstm(x, hc) if hc else self.lstm(x)
         x = self.output_layer(x)
         return x, hc
+
 
 def load_model(device: torch.device) -> LSTMModel:
     """

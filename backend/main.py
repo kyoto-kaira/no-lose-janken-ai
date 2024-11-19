@@ -1,13 +1,14 @@
 import torch
 import threading
+import time
 from .game import janken_game
 from .model import load_model
+
 
 def start_timer(event_start: threading.Event, event_end: threading.Event) -> None:
     """
     ジャンケンの合図を出すためのタイマー関数。
     """
-    import time
     time.sleep(5)
     print("最初はグー")
     time.sleep(1)
@@ -17,6 +18,7 @@ def start_timer(event_start: threading.Event, event_end: threading.Event) -> Non
     time.sleep(1.5)
     print("ポン")
     event_end.set()
+
 
 def main():
     """
@@ -43,6 +45,7 @@ def main():
         elif user_input.lower() == 'q':
             print("終了します。")
             break
+
 
 if __name__ == "__main__":
     main()
