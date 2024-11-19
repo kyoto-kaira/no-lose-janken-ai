@@ -1,7 +1,7 @@
 from typing import Optional, Tuple
 
-import torch
 import torch.nn as nn
+from torch import Tensor
 
 
 class LSTMNet(nn.Module):
@@ -16,8 +16,8 @@ class LSTMNet(nn.Module):
         self.hidden2tag = nn.Linear(hidden_dim, tagset_size)
 
     def forward(
-        self, x: torch.Tensor, hc: Optional[Tuple[torch.Tensor, torch.Tensor]] = None
-    ) -> Tuple[torch.Tensor, Tuple[torch.Tensor, torch.Tensor] | None]:
+        self, x: Tensor, hc: Optional[Tuple[Tensor, Tensor]] = None
+    ) -> Tuple[Tensor, Tuple[Tensor, Tensor] | None]:
         x = self.linear(x)
         x, hc = self.lstm(x, hc) if hc is not None else self.lstm(x)
         x = self.hidden2tag(x)

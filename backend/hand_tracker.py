@@ -1,8 +1,10 @@
 from typing import Optional
 
 import cv2
-import mediapipe as mp
 import numpy as np
+from mediapipe.python.solutions.drawing_utils import draw_landmarks
+from mediapipe.python.solutions.hands import HandLandmark, Hands
+from mediapipe.python.solutions.hands_connections import HAND_CONNECTIONS
 
 
 class HandTracker:
@@ -20,11 +22,9 @@ class HandTracker:
         MediapipeのHandsモジュールを初期化し、最大検出する手の数や
         検出・追跡信頼度のパラメータを設定します。
         """
-        self.mp_hands = mp.solutions.hands
-        self.mp_drawing = mp.solutions.drawing_utils
-        self.hands = self.mp_hands.Hands(max_num_hands=1, min_detection_confidence=0.5, min_tracking_confidence=0.5)
+        self.hands = Hands(max_num_hands=1, min_detection_confidence=0.5, min_tracking_confidence=0.5)
 
-    def process_frame(self, image: np.ndarray) -> Optional[mp.solutions.hands.HandLandmark | None]:
+    def process_frame(self, image: np.ndarray) -> Optional[HandLandmark | None]:
         """
         入力画像から手のランドマークを検出します。
 
@@ -34,7 +34,7 @@ class HandTracker:
             image (np.ndarray): 入力画像（BGR形式）
 
         Returns:
-            Optional[mp.solutions.hands.HandLandmark | None]: 検出された手のランドマーク。
+            Optional[HandLandmark | None]: 検出された手のランドマーク。
             検出できなかった場合はNoneを返します。
         """
         image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -44,9 +44,7 @@ class HandTracker:
             return results.multi_hand_landmarks
         return None
 
-    def draw_landmarks(
-        self, image: np.ndarray, multi_hand_landmarks: Optional[mp.solutions.hands.HandLandmark | None]
-    ) -> None:
+    def draw_landmarks(self, image: np.ndarray, multi_hand_landmarks: Optional[HandLandmark | None]) -> None:
         """
         入力画像に検出された手のランドマークを描画します。
 
@@ -54,11 +52,11 @@ class HandTracker:
 
         Args:
             image (np.ndarray): 入力画像（BGR形式）
-            multi_hand_landmarks (Optional[mp.solutions.hands.HandLandmark | None]): 検出された手のランドマーク
-        
+            multi_hand_landmarks (Optional[HandLandmark | None]): 検出された手のランドマーク
+
         Returns:
             None
         """
         if multi_hand_landmarks:
             for landmarks in multi_hand_landmarks:
-                self.mp_drawing.draw_landmarks(image, landmarks, self.mp_hands.HAND_CONNECTIONS)
+                draw_landmarks(image, landmarks, HAND_CONNECTIONS)

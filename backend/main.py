@@ -1,12 +1,13 @@
 import threading
 
+import keyboard
 import torch
 
 from .game import JankenGame
 from .model import LSTMNet
 from .timer import GameTimer
 
-# 定数
+# ジャンケンゲームのモデルのパス
 MODEL_PATH = "backend/data/lstm.pth"
 
 # モデルとデバイスの初期化（グローバルに配置）
@@ -14,7 +15,6 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = LSTMNet(63, 50, 100, 3).to(device)
 model.load_state_dict(torch.load(MODEL_PATH, map_location=device, weights_only=True))
 model.eval()
-
 # ジャンケンゲームの初期化（グローバルに配置）
 game = JankenGame(model, device)
 
@@ -34,8 +34,9 @@ def main() -> None:
     """
     while True:
         # ゲーム操作の入力受付
-        pressed = input("Press 's' to start the game or 'q' to quit: ")
-        if pressed == "s":
+        print("Press 's' to start the game or 'q' to quit: ")
+        pressed = keyboard.read_event()
+        if pressed.name == "s":
             # イベントフラグの初期化
             event_start = threading.Event()
             event_end = threading.Event()
@@ -51,12 +52,9 @@ def main() -> None:
             worker.join()
             trigger.join()
 
-        elif pressed == "q":
+        elif pressed.name == "q":
             print("ゲームを終了します。")
             break
-
-        else:
-            print("無効な入力です。's' または 'q' を入力してください。")
 
 
 if __name__ == "__main__":

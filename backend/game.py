@@ -29,7 +29,7 @@ class JankenGame:
         self.tracker = HandTracker()  # 手のランドマーク検出器
         self.hc = None  # LSTMの隠れ状態を保持
 
-    def predict(self, landmarks: list) -> str:
+    def predict(self, landmarks: list[float]) -> str:
         """
         手のランドマーク情報からジャンケンの手を予測します。
 
