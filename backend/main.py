@@ -15,7 +15,7 @@ def start_timer(event_start: threading.Event, event_end: threading.Event) -> Non
     event_start.set()
     time.sleep(1)
     print("じゃんけん")
-    time.sleep(15)
+    time.sleep(1.5)
     print("ポン")
     event_end.set()
 
@@ -26,7 +26,7 @@ def main():
     """
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = load_model(device)
-
+    print(device)
     while True:
         user_input = input("Press 's' to start the game or 'q' to quit: ")
         if user_input.lower() == 's':

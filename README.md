@@ -1,8 +1,9 @@
 # no-lose-janken-ai
-コマンドの順番  
-1.\ docker build -t janken-app .
-2.\ docker run -it --rm --device=/dev/video0:/dev/video0 \
-    -e DISPLAY=$DISPLAY \
-    -v /tmp/.X11-unix:/tmp/.X11-unix \
-    janken-app
-
+## 前提
+・windows11のcmdで作動  
+・cuda12.4  
+## 手順
+python -m venv venv  
+venv/Scripts/activate.bat  
+pip install -r requirements.txt  
+python -m backend.main  
