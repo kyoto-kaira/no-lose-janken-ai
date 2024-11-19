@@ -1,13 +1,21 @@
+from threading import Event
+from typing import List, Optional, Tuple
+
 import cv2
 import torch
-from threading import Event
+
 from .camera import HandTracker, find_camera
 from .model import LSTMModel
-from typing import List
+
 JANKEN_LABELS = {0: "グー", 1: "チョキ", 2: "パー"}
 
 
-def predict_hand_gesture(landmarks: List[float], model: LSTMModel, device: torch.device, hc=None) -> str:
+def predict_hand_gesture(
+    landmarks: List[float],
+    model: LSTMModel,
+    device: torch.device,
+    hc: Optional[Tuple[torch.Tensor, torch.Tensor]] = None,
+) -> str:
     """
     手のランドマークを使用してジャンケンの手を予測する。
     """
@@ -40,18 +48,16 @@ def janken_game(event_start: Event, event_end: Event, model: LSTMModel, device: 
         if event_start.is_set():
             landmarks_list = tracker.process_frame(frame)
             if landmarks_list:
-                landmarks = [
-                    lm.x for lm in landmarks_list[0].landmark
-                ] + [
-                    lm.y for lm in landmarks_list[0].landmark
-                ] + [
-                    lm.z for lm in landmarks_list[0].landmark
-                ]
+                landmarks = (
+                    [lm.x for lm in landmarks_list[0].landmark]
+                    + [lm.y for lm in landmarks_list[0].landmark]
+                    + [lm.z for lm in landmarks_list[0].landmark]
+                )
                 gesture = predict_hand_gesture(landmarks, model, device, hc)
                 print(f"予測: {gesture}")
 
         cv2.imshow("Hand Tracking", frame)
-        if cv2.waitKey(1) & 0xFF == ord('q') or event_end.is_set():
+        if cv2.waitKey(1) & 0xFF == ord("q") or event_end.is_set():
             break
 
     cap.release()

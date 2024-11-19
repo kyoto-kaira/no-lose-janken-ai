@@ -1,6 +1,8 @@
+from typing import List, Optional
+
 import cv2
 import mediapipe as mp
-from typing import Optional
+import numpy as np
 
 
 def find_camera() -> Optional[int]:
@@ -21,14 +23,12 @@ class HandTracker:
     """
 
     def __init__(self) -> None:
-        self.hands = mp.solutions.hands.Hands(
-            max_num_hands=1,
-            min_detection_confidence=0.5,
-            min_tracking_confidence=0.5
-        )
+        self.hands = mp.solutions.hands.Hands(max_num_hands=1, min_detection_confidence=0.5, min_tracking_confidence=0.5)
         self.drawing_utils = mp.solutions.drawing_utils
 
-    def process_frame(self, image) -> Optional[list]:
+    def process_frame(
+        self, image: np.ndarray
+    ) -> Optional[List[mp.framework.formats.landmark_pb2.NormalizedLandmarkList]]:
         """
         フレームから手のランドマークを検出する。
         """
@@ -36,5 +36,5 @@ class HandTracker:
         image_rgb.flags.writeable = False
         results = self.hands.process(image_rgb)
         if results.multi_hand_landmarks:
-            return results.multi_hand_landmarks
+            return results.multi_hand_landmarks  # type: ignore
         return None

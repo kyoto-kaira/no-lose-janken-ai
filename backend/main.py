@@ -1,6 +1,8 @@
-import torch
 import threading
 import time
+
+import torch
+
 from .game import janken_game
 from .model import load_model
 
@@ -20,7 +22,7 @@ def start_timer(event_start: threading.Event, event_end: threading.Event) -> Non
     event_end.set()
 
 
-def main():
+def main() -> None:
     """
     ゲームを始めるための関数
     """
@@ -28,7 +30,7 @@ def main():
     model = load_model(device)
     while True:
         user_input = input("Press 's' to start the game or 'q' to quit: ")
-        if user_input.lower() == 's':
+        if user_input.lower() == "s":
             event_start = threading.Event()
             event_end = threading.Event()
 
@@ -41,7 +43,7 @@ def main():
             game_thread.join()
             timer_thread.join()
 
-        elif user_input.lower() == 'q':
+        elif user_input.lower() == "q":
             print("終了します。")
             break
 

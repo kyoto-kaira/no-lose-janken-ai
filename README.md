@@ -16,6 +16,8 @@
    python -m venv venv
    venv\Scripts\activate.bat
    pip install -r requirements.txt
+   pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+   pip install -r requirements_dev.txt
    ```
 2. **アプリの起動**  
    以下のコマンドでアプリを実行します。
