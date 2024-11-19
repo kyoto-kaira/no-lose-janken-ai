@@ -76,7 +76,7 @@ class JankenGame:
                 self.tracker.draw_landmarks(frame, multi_hand_landmarks)
                 cv2.imshow("Hand Tracking", frame)  # フレームを表示
 
-            # 終了フラグまたは「q」キーが押された場合、ループを終了
+            # 終了フラグによってループを終了
             if event_end.is_set():
                 break
 
