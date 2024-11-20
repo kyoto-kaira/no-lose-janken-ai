@@ -77,7 +77,7 @@ async def janken_game(frame_placeholder: DeltaGenerator) -> None:
                 st.session_state["set_finish_button"] = False
                 break
         # whileを円滑に処理するためのawait
-        await asyncio.sleep(0.01)
+        await asyncio.sleep(0.005)
 
     cap.release()
     cv2.destroyAllWindows()
@@ -88,16 +88,17 @@ async def timer() -> None:
     placeholder = st.empty()  # 更新可能なプレースホルダーを作成
 
     # 最初の状態
+    await asyncio.sleep(3)
     placeholder.write("最初はグー")
-    await asyncio.sleep(0.5)
+    await asyncio.sleep(2)
 
     # 次の状態
     placeholder.write("最初はグー・じゃんけん")
-    await asyncio.sleep(1)
+    await asyncio.sleep(2)
 
     # 最終状態
     placeholder.write("最初はグー・じゃんけん・ポン")
-    await asyncio.sleep(1.5)
+    await asyncio.sleep(0.5)
 
     start_event.clear()
     stop_event.set()
