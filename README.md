@@ -19,8 +19,13 @@
    pip install -r requirements_dev.txt  
    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
    ```
-2. **アプリの起動**  
-   以下のコマンドでアプリを実行します。
+3. **バックエンドの確認**  
+   以下のコマンドでバックエンド上の予測モデルを確認できます。
    ```bash
    python -m backend.main
+   ```
+3. **アプリの起動**  
+   以下のコマンドでアプリを実行します。
+   ```bash
+   streamlit run app.py
    ```
