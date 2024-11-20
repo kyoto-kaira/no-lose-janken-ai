@@ -23,7 +23,7 @@ start_event = asyncio.Event()
 start_event.clear()
 # Mediapipe の Hands モジュールの初期化
 hand_tracker = HandTracker()
-
+softmax = torch.nn.Softmax(dim=2)
 
 async def janken_game(frame_placeholder: DeltaGenerator) -> None:
     hc = None
@@ -49,10 +49,14 @@ async def janken_game(frame_placeholder: DeltaGenerator) -> None:
             # データを予測
             data = torch.tensor(landmarks).reshape(1, 1, 63).to(device)
             with torch.no_grad():
-                y_pred, hc = model(data, hc)
-                y_pred = int(y_pred.argmax(2).item())
+                y_preds, hc = model(data, hc)
+                y_pred_max = int(y_preds.argmax(2).item())
             if not start_event.is_set() and not st.session_state["wrote_janken_result"]:
-                st.write(f"予測された手: {JANKEN_LABELS[y_pred]}")
+                y_probs= softmax(y_preds).tolist()[0][0]
+                print(y_probs)
+                for i,y_prob in enumerate(y_probs):
+                    st.write(f"{JANKEN_LABELS[i]}:{y_prob}")
+                
                 st.session_state["wrote_janken_result"] = True
 
         # 画像を再度書き込み可能にして BGR に戻す
@@ -81,20 +85,23 @@ async def janken_game(frame_placeholder: DeltaGenerator) -> None:
 
 
 async def timer() -> None:
+    placeholder = st.empty()  # 更新可能なプレースホルダーを作成
+
+    # 最初の状態
+    placeholder.write("最初はグー")
     await asyncio.sleep(0.5)
-    st.write("-" * 20)
-    st.write("最初はグー")
-    st.write("-" * 20)
+
+    # 次の状態
+    placeholder.write("最初はグー・じゃんけん")
     await asyncio.sleep(1)
-    st.write("-" * 20)
-    st.write("じゃんけん")
-    st.write("-" * 20)
+
+    # 最終状態
+    placeholder.write("最初はグー・じゃんけん・ポン")
     await asyncio.sleep(1.5)
-    st.write("-" * 20)
-    st.write("ポン")
-    st.write("-" * 20)
+
     start_event.clear()
     stop_event.set()
+
 
 
 async def main_game(frame_placeholder: DeltaGenerator) -> None:
