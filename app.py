@@ -1,4 +1,5 @@
 import asyncio
+import subprocess
 
 import cv2
 import streamlit as st
@@ -8,6 +9,8 @@ from backend.hand_tracker import HandTracker
 from backend.model import LSTMNet
 from streamlit.delta_generator import DeltaGenerator
 
+# モジュールのインストール
+subprocess.run(["uv", "pip", "install", "mediapipe", "--no-deps"])
 # モデルの初期設定
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = LSTMNet(63, 50, 100, 3)
@@ -24,6 +27,7 @@ start_event.clear()
 # Mediapipe の Hands モジュールの初期化
 hand_tracker = HandTracker()
 softmax = torch.nn.Softmax(dim=2)
+
 
 async def janken_game(frame_placeholder: DeltaGenerator) -> None:
     hc = None
@@ -50,13 +54,12 @@ async def janken_game(frame_placeholder: DeltaGenerator) -> None:
             data = torch.tensor(landmarks).reshape(1, 1, 63).to(device)
             with torch.no_grad():
                 y_preds, hc = model(data, hc)
-                y_pred_max = int(y_preds.argmax(2).item())
             if not start_event.is_set() and not st.session_state["wrote_janken_result"]:
-                y_probs= softmax(y_preds).tolist()[0][0]
+                y_probs = softmax(y_preds).tolist()[0][0]
                 print(y_probs)
-                for i,y_prob in enumerate(y_probs):
+                for i, y_prob in enumerate(y_probs):
                     st.write(f"{JANKEN_LABELS[i]}:{y_prob}")
-                
+
                 st.session_state["wrote_janken_result"] = True
 
         # 画像を再度書き込み可能にして BGR に戻す
@@ -102,7 +105,6 @@ async def timer() -> None:
 
     start_event.clear()
     stop_event.set()
-
 
 
 async def main_game(frame_placeholder: DeltaGenerator) -> None:

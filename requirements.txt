@@ -1,4 +1,4 @@
-mediapipe == 0.10.14
-keyboard == 0.13.5
-opencv-contrib-python == 4.10.0.84
-streamlit == 1.40.1
+matplotlib
+opencv-python-headless
+streamlit==1.40.1
+torch
