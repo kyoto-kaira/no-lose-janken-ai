@@ -1,5 +1,8 @@
-import asyncio
 import subprocess
+
+# モジュールのインストール
+subprocess.run(["uv", "pip", "install", "mediapipe", "--no-deps"])
+import asyncio
 
 import cv2
 import streamlit as st
@@ -9,8 +12,6 @@ from backend.hand_tracker import HandTracker
 from backend.model import LSTMNet
 from streamlit.delta_generator import DeltaGenerator
 
-# モジュールのインストール
-subprocess.run(["uv", "pip", "install", "mediapipe", "--no-deps"])
 # モデルの初期設定
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = LSTMNet(63, 50, 100, 3)
