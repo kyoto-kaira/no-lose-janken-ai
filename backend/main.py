@@ -3,12 +3,10 @@ import threading
 import keyboard
 import torch
 
+from .const import MODEL_PATH
 from .game import JankenGame
 from .model import LSTMNet
 from .timer import GameTimer
-
-# ジャンケンゲームのモデルのパス
-MODEL_PATH = "backend/data/lstm.pth"
 
 # モデルとデバイスの初期化（グローバルに配置）
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

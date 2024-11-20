@@ -4,9 +4,8 @@ import cv2
 import torch
 from torch import nn
 
+from .const import JANKEN_LABELS
 from .hand_tracker import HandTracker
-
-JANKEN_LABELS = {0: "グー", 1: "チョキ", 2: "パー"}
 
 
 class JankenGame:
