@@ -1,4 +1,3 @@
-matplotlib
-opencv-python-headless
+mediapipe
 streamlit==1.40.1
 torch

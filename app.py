@@ -1,7 +1,3 @@
-import subprocess
-
-# モジュールのインストール
-subprocess.run(["uv", "pip", "install", "mediapipe", "--no-deps", "--system"])
 import asyncio
 
 import cv2
