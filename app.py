@@ -28,7 +28,7 @@ softmax = torch.nn.Softmax(dim=2)
 
 async def janken_game(frame_placeholder: DeltaGenerator) -> None:
     hc = None
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(-1, cv2.CAP_V4L)
     while cap.isOpened():
         success, image = cap.read()
         if not success:
