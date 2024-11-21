@@ -1,31 +1,53 @@
 # no-lose-janken-ai
 
-## 前提条件
+## 動かし方
+1. uvを入れる（入っている人はこの手順は飛ばしてください）
 
-- **OS**: Windows 11  
-- **CUDAバージョン**: 12.4  
+```shell
+# macOS または Linuxの人
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
----
+# Windowsの人
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
 
-## 使用方法
+2. リポジトリをクローンする
 
-1. **仮想環境の作成**  
-   以下のコマンドで仮想環境を作成します。(順番は以下のコードの通りにしてください。)  
+```shell
+# 任意のディレクトリに移動して以下を実行すると、このリポジトリがその下に作成されます
+git clone https://github.com/kyoto-kaira/no-lose-janken-ai.git
 
-   ```bash
-   python -m venv venv  
-   venv\Scripts\activate.bat  
-   pip install -r requirements.txt  
-   pip install -r requirements_dev.txt  
-   pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
-   ```
-3. **バックエンドの確認**  
-   以下のコマンドでバックエンド上の予測モデルを確認できます。
-   ```bash
-   python -m backend.main
-   ```
-3. **アプリの起動**  
-   以下のコマンドでアプリを実行します。
-   ```bash
-   streamlit run app.py
-   ```
+# 作成されたリポジトリに移動する
+cd no-lose-janken-ai
+```
+
+3. Python3.11の仮想環境を作成する
+
+```shell
+# 以下を実行すると、現在のディレクトリに.venv/という名前の仮想環境が作成されます
+uv venv -p 3.11.10
+```
+
+4. 仮想環境を有効化する
+
+```shell
+# macOS または Linuxの人
+source .venv/bin/activate
+
+# Windowsの人 (バックスラッシュです!!)
+.venv\Scripts\activate
+
+# ディレクトリ名の左側に (no-lose-janken-ai) と表示されれば成功です
+```
+
+5. 依存パッケージをインストールする
+
+```shell
+uv pip install -r requirements.txt
+```
+
+6. アプリを起動する
+
+```shell
+streamlit run app.py
+```

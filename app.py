@@ -1,12 +1,14 @@
 import asyncio
 
 import cv2
+import pandas as pd
 import streamlit as st
 import torch
+from streamlit.delta_generator import DeltaGenerator
+
 from backend.const import JANKEN_LABELS, MODEL_PATH
 from backend.hand_tracker import HandTracker
 from backend.model import LSTMNet
-from streamlit.delta_generator import DeltaGenerator
 
 # モデルの初期設定
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -28,7 +30,9 @@ softmax = torch.nn.Softmax(dim=2)
 
 async def janken_game(frame_placeholder: DeltaGenerator) -> None:
     hc = None
-    cap = cv2.VideoCapture(-1, cv2.CAP_V4L)
+    cap = cv2.VideoCapture(0)
+    result_placeholder = st.empty()
+    graph_placeholder = st.empty()
     while cap.isOpened():
         success, image = cap.read()
         if not success:
@@ -51,11 +55,16 @@ async def janken_game(frame_placeholder: DeltaGenerator) -> None:
             data = torch.tensor(landmarks).reshape(1, 1, 63).to(device)
             with torch.no_grad():
                 y_preds, hc = model(data, hc)
-            if not start_event.is_set() and not st.session_state["wrote_janken_result"]:
+            # if not start_event.is_set() and not st.session_state["wrote_janken_result"]:
                 y_probs = softmax(y_preds).tolist()[0][0]
                 print(y_probs)
-                for i, y_prob in enumerate(y_probs):
-                    st.write(f"{JANKEN_LABELS[i]}:{y_prob}")
+                col1, col2, col3 = result_placeholder.columns(3)
+                col1.metric("グー", f"{y_probs[0] * 100:.2f}%")
+                col2.metric("チョキ", f"{y_probs[1] * 100:.2f}%")
+                col3.metric("パー", f"{y_probs[2] * 100:.2f}%")
+
+                df = pd.DataFrame(y_probs, index=JANKEN_LABELS.values(), columns=["確率"])
+                graph_placeholder.bar_chart(df, height=300)
 
                 st.session_state["wrote_janken_result"] = True
 
@@ -84,8 +93,7 @@ async def janken_game(frame_placeholder: DeltaGenerator) -> None:
     start_event.clear()
 
 
-async def timer() -> None:
-    placeholder = st.empty()  # 更新可能なプレースホルダーを作成
+async def timer(placeholder: DeltaGenerator) -> None:
 
     # 最初の状態
     await asyncio.sleep(3)
@@ -104,9 +112,9 @@ async def timer() -> None:
     stop_event.set()
 
 
-async def main_game(frame_placeholder: DeltaGenerator) -> None:
+async def main_game(frame_placeholder: DeltaGenerator, timing_placeholder: DeltaGenerator) -> None:
     janken = asyncio.create_task(janken_game(frame_placeholder))
-    time = asyncio.create_task(timer())
+    time = asyncio.create_task(timer(timing_placeholder))
     st.session_state.wrote_janken_result = False
     st.session_state.set_finish_button = False
     await asyncio.gather(janken, time)
@@ -117,8 +125,9 @@ async def main() -> None:
         start_event.set()
         stop_event.clear()
         frame_placeholder = st.empty()
+        timing_placeholder = st.empty()
         st.session_state.pushet_start_button = False
-        await asyncio.gather(main_game(frame_placeholder))
+        await asyncio.gather(main_game(frame_placeholder, timing_placeholder))
         st.rerun()
     else:
         if st.button("ゲーム開始"):
